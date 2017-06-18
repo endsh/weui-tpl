@@ -1,0 +1,30 @@
+{
+  "name": "{%= js_safe_name %}",
+  "version": "0.1.0",
+  "authors": [
+    "linshao <438985635@qq.com>"
+  ],
+  "description": "{%= js_safe_name %} of XiaoKu Inc.",
+  "keywords": [
+    "{%= js_safe_name %}"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "html5shiv": "~3.7.3",
+    "respond": "~1.4.2",
+    "jquery-form": "~3.46.0",
+    "jquery-tmpl": "*",
+    "weui": "^0.4.3",
+    "bxslider-4": "^4.2.5",
+    "fastclick": "^1.0.6",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7"
+  }
+}

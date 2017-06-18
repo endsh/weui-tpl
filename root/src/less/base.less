@@ -1,0 +1,192 @@
+//
+// Base
+// --------------------------------------------------
+
+html {
+    background: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+body {
+    background-color: @bg-color;
+    color: @text-color;
+    max-width: 600px;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, img, label {
+    -webkit-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+a {
+    color: @link-color;
+}
+
+ul {
+    list-style: none;
+}
+
+.weui_tabbar,
+.weui_navbar,
+.fixed {
+    max-width: 600px;
+}
+
+
+.fill {
+    height: 100%;
+}
+
+.iconfont {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 28px;
+
+    &:before {
+        display: inline-block;
+        color: #333;
+        font-size: 400%;
+        line-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+        -webkit-transform: scale(.25);
+                transform: scale(.25);
+    }
+
+    &.icon-active:before {
+        color: @theme-color;
+    }
+}
+
+.weui_cells {
+    font-size: 16px;
+    line-height: 24px;
+
+    .iconfont {
+        width: 22px;
+        height: 22px;
+        font-size: 20px;
+        line-height: 20px;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+}
+
+.weui_tabbar {
+    max-width: 600px;
+    background-color: @view-color;
+    position: fixed;
+    z-index: 1;
+
+    &:before {
+        border-top: 1px solid @border-color;
+    }
+}
+
+.weui_tabbar_item {
+    .weui_tabbar_icon .icon {
+        height: 24px;
+        width: 24px;
+        font-size: 24px;
+        line-height: 24px;
+
+        &:before {
+            color: #888;
+        }
+    }
+
+    &.weui_bar_item_on {
+        .weui_tabbar_icon .icon:before {
+            color: @theme-color;
+        }
+
+        .weui_tabbar_label {
+            color: @theme-color;
+        }
+    }
+}
+
+.tabbar-wrapper {
+    height: 54px;
+
+    .weui_tab + & {
+        height: 0;
+    }
+}
+
+.weui_tab {
+}
+
+.weui_navbar {
+    height: 45px;
+    white-space: nowrap;
+    overflow-x: auto;
+    background: #fff;
+    font-size: 0;
+
+    & + .weui_tab_bd {
+        padding-top: 45px;
+    }
+
+    .weui_navbar_item {
+        padding: 10px 15px;
+        font-size: 15px;
+        background: #fff;
+
+        &:after {
+            border: none;
+        }
+
+        &.weui_bar_item_on {
+            font-weight: 500;
+            padding: 10px 15px 9px 15px;
+            color: @theme-color;
+            background: #fff;
+            border-bottom: 2px solid @theme-color;
+        }
+    }
+}
+
+.cool-navbar {
+    display: block;
+
+    &:after {
+        border-bottom: none;
+    }
+    
+    .weui_navbar_item {
+        white-space: nowrap;
+        display: inline-block;
+        border-bottom: 1px solid @border-color;
+    }
+}
+
+.normal-navbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    & + .weui_tab_bd {
+        padding-top: 0;
+        height: auto;
+    }
+}
+
+.weui-infinite-scroll {
+    height: 45px;
+}
